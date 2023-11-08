@@ -1,26 +1,68 @@
 import React from "react";
+import { Container, Grid, Typography } from "@mui/material";
+import { MessagesSquare } from 'lucide-react';
 
-export const Features = (props) => {
+export const Features = () => {
   return (
-    <div id="features" className="text-center">
-      <div className="container">
-        <div className="col-md-10 col-md-offset-1 section-title">
-          <h2>Features</h2>
-        </div>
-        <div className="row">
-          {props.data
-            ? props.data.map((d, i) => (
-                <div key={`${d.title}-${i}`} className="col-xs-6 col-md-3">
-                  {" "}
-                  <i className={d.icon}></i>
-                  <h3>{d.title}</h3>
-                  <p>{d.text}</p>
-                </div>
-              ))
-            : "Loading..."}
-        </div>
-      </div>
-    </div>
-    
+    <>
+      <Container id='features' maxWidth="none" className="featuresContainer">
+        <Container maxWidth="lg">
+          <Grid container spacing={8} direction="column" justifyContent="center" alignItems="center">
+            <Grid item xs={12}>
+              <Typography className="featuresTitle">
+                Features
+                <hr />
+              </Typography>
+            </Grid>
+            <Grid item container xs={12} textAlign="center" spacing={2} direction="row" justifyContent="center" alignItems="center">
+              <Grid item xs={6} md={3}>
+                <Typography>
+                  <MessagesSquare className="featuresIcon" />
+                </Typography>
+                <Typography className="featuresText1">
+                  Lorem ipsum
+                </Typography>
+                <Typography className="featuresText2">
+                  Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.
+                </Typography>
+              </Grid>
+              <Grid item xs={6} md={3}>
+                <Typography>
+                  <MessagesSquare className="featuresIcon" />
+                </Typography>
+                <Typography className="featuresText1">
+                  Lorem ipsum
+                </Typography>
+                <Typography className="featuresText2">
+                  Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.
+                </Typography>
+              </Grid>
+              <Grid item xs={6} md={3}>
+                <Typography>
+                  <MessagesSquare className="featuresIcon" />
+                </Typography>
+                <Typography className="featuresText1">
+                  Lorem ipsum
+                </Typography>
+                <Typography className="featuresText2">
+                  Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.
+                </Typography>
+              </Grid>
+              <Grid item xs={6} md={3}>
+                <Typography>
+                  <MessagesSquare className="featuresIcon" />
+                </Typography>
+                <Typography className="featuresText1">
+                  Lorem ipsum
+                </Typography>
+                <Typography className="featuresText2">
+                  Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.
+                </Typography>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Container>
+      </Container>
+    </>
   );
 };

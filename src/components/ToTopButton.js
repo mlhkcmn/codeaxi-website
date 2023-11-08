@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { MoveUp } from 'lucide-react';
 
 function ToTopButton() {
     const [isVisible, setIsVisible] = useState(false);
@@ -30,7 +31,7 @@ function ToTopButton() {
 
     return (
         <div className={`to-top-button ${isVisible ? 'visible' : ''}`} onClick={scrollToTop}>
-            <i className="fa fa-arrow-up"></i>
+            <MoveUp />
         </div>
     );
 }

@@ -1,6 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import React from "react";
+import { Button, Container, Divider, Grid, Typography } from "@mui/material";
+import { Email, Phone } from "@mui/icons-material";
 
 const initialState = {
   name: "",
@@ -32,104 +33,86 @@ export const Contact = (props) => {
       );
   };
   return (
-    <div>
-      <div id="contact">
-        <div className="container">
-          <div className="col-md-8">
-            <div className="row">
-              <div className="section-title">
-                <h2>Get In Touch</h2>
-                <p>
+    <>
+      <Container id='contact' maxWidth="none" className="contactContainer">
+        <Container>
+          <Grid container direction="row">
+            <Grid item container xs={12} md={9}>
+              <Grid item xs={10}>
+                <Typography className="contactTitle">
+                  BIZE ULASIN
+                  <Divider className="contactDivider" />
+                </Typography>
+                <Typography className="contactText1">
                   Please fill out the form below to send us an email and we will
                   get back to you as soon as possible.
-                </p>
-              </div>
-              <form name="sentMessage" validate onSubmit={handleSubmit}>
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        className="form-control"
-                        placeholder="Name"
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className="help-block text-danger"></p>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="form-group">
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        className="form-control"
-                        placeholder="Email"
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className="help-block text-danger"></p>
-                    </div>
-                  </div>
-                </div>
-                <div className="form-group">
-                  <textarea
-                    name="message"
-                    id="message"
-                    className="form-control"
-                    rows="4"
-                    placeholder="Message"
-                    required
-                    onChange={handleChange}
-                  ></textarea>
-                  <p className="help-block text-danger"></p>
-                </div>
-                <div id="success"></div>
-                <button type="submit" className="btn btn-custom btn-lg">
-                  Send Message
-                </button>
+                </Typography>
+              </Grid>
+              <form onSubmit={handleSubmit}>
+                <Grid item container direction="row" spacing={4}>
+                  <Grid item xs={12} md={5}>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      className="contactInput"
+                      placeholder="Name"
+                      required
+                      onChange={handleChange}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={5}>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      className="contactInput"
+                      placeholder="Email"
+                      required
+                      onChange={handleChange}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={10}>
+                    <textarea
+                      name="message"
+                      id="message"
+                      className="contactInput"
+                      rows="4"
+                      placeholder="Message"
+                      required
+                      onChange={handleChange}
+                    ></textarea>
+                  </Grid>
+                  <Grid item xs={12}>
+                    <Button type="submit" className="contactButton">
+                      Send Message
+                    </Button>
+                  </Grid>
+                </Grid>
               </form>
-            </div>
-          </div>
-          <div className="col-md-3 col-md-offset-1 contact-info">
-            <div className="contact-item">
-              <h3>Contact Info</h3>
-              <p>
-                <span>
-                  <i className="fa fa-map-marker"></i> Address
-                </span>
-                {props.data ? props.data.address : "loading"}
-              </p>
-            </div>
-            <div className="contact-item">
-              <p>
-                <span>
-                  <i className="fa fa-phone"></i> Phone
-                </span>{" "}
-                {props.data ? props.data.phone : "loading"}
-              </p>
-            </div>
-            <div className="contact-item">
-              <p>
-                <span>
-                  <i className="fa fa-envelope-o"></i> Email
-                </span>{" "}
-                {props.data ? props.data.email : "loading"}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="footer">
-        <div className="container text-center">
-          <p>
-            CodeAxi Software©
-          </p>
-        </div>
-      </div>
-    </div>
+            </Grid>
+            <Grid item xs container direction="column">
+              <Grid item xs>
+                <Typography className="contactInfo">
+                  Contact info
+                </Typography>
+                <Typography className="contactInfoTitle">
+                  <Phone /> Phone
+                </Typography>
+                <Typography className="contactInfoText">
+                  +90 535 517 42 91
+                </Typography>
+                <Typography className="contactInfoTitle">
+                  <Email /> Email
+                </Typography>
+                <Typography className="contactInfoText">
+                  info@codeaxi.com
+                </Typography>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Container>
+      </Container>
+    </>
   );
 };

@@ -1,45 +1,39 @@
 import React from "react";
+import { Container, Grid, Typography } from "@mui/material";
 
 export const About = (props) => {
   return (
-    <center>
-      <div id="about">
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-12 col-md-6">
-              {" "}
-              <img src="/img/about.jpg" className="img-responsive" alt="" />{" "}
-            </div>
-            <div className="col-xs-12 col-md-6">
-              <div className="about-text">
-                <h2>Hakkımızda</h2>
-                <p>{props.data ? props.data.paragraph : "loading..."}</p>
-                <h3>Neden bizi seçmelisiniz?</h3>
-                <div className="list-style">
-                  <div className="col-lg-6 col-sm-6 col-xs-12">
-                    <ul>
-                      {props.data
-                        ? props.data.Why.map((d, i) => (
-                          <li key={`${d}-${i}`}>{d}</li>
-                        ))
-                        : "loading"}
-                    </ul>
-                  </div>
-                  <div className="col-lg-6 col-sm-6 col-xs-12">
-                    <ul>
-                      {props.data
-                        ? props.data.Why2.map((d, i) => (
-                          <li key={`${d}-${i}`}> {d}</li>
-                        ))
-                        : "loading"}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </center>
+    <>
+      <Container id='about' maxWidth="none" className="aboutContainer">
+        <Container maxWidth="lg">
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm container>
+              <Grid item xs container spacing={2}>
+                <Grid item>
+                  <Typography className="aboutTitle1">
+                    Hakkımızda
+                    <hr />
+                  </Typography>
+                  <Typography className="aboutText1">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </Typography>
+                  <Typography className="aboutTitle2">
+                    Neden bizi seçmelisiniz?
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <center>
+                <img src="/img/about.jpg" className="imageResponsive" alt="" />
+              </center>
+            </Grid>
+          </Grid>
+        </Container>
+      </Container>
+    </>
   );
 };

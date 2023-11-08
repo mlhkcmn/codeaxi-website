@@ -1,70 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
+import { AppBar, Box, Toolbar, Typography, Menu, Container, MenuItem, IconButton, Button } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-scroll';
 
-export const Navigation = (props) => {
+function Navigation() {
+  const [anchorElNav, setAnchorElNav] = useState(null);
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
   return (
-    <nav id="menu" className="navbar navbar-default navbar-fixed-top">
-      <div className="container">
-        <div className="navbar-header">
-          <button
-            type="button"
-            className="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#bs-example-navbar-collapse-1"
-          >
-            {" "}
-            <span className="sr-only">Toggle navigation</span>{" "}
-            <span className="icon-bar"></span>{" "}
-            <span className="icon-bar"></span>{" "}
-            <span className="icon-bar"></span>{" "}
-          </button>
-          <a className="navbar-brand page-scroll" href="#page-top">
-            Codeaxi
-          </a>{" "}
-        </div>
+    <center>
+      <AppBar position="fixed" className="header">
+        <Container maxWidth="xl">
+          <Toolbar>
 
-        <div
-          className="collapse navbar-collapse"
-          id="bs-example-navbar-collapse-1"
-        >
-          <ul className="nav navbar-nav navbar-right">
-            <li>
-              <a href="#features" className="page-scroll">
-                Features
-              </a>
-            </li>
-            <li>
-              <a href="#about" className="page-scroll">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#services" className="page-scroll">
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#portfolio" className="page-scroll">
-                Gallery
-              </a>
-            </li>
-            <li>
-              <a href="#testimonials" className="page-scroll">
-                Testimonials
-              </a>
-            </li>
-            <li>
-              <a href="#team" className="page-scroll">
-                Team
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="page-scroll">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+            {/* Mobil Header Started */}
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'none' } }}>
+              <Menu id="menu-appbar" anchorEl={anchorElNav} anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} keepMounted transformOrigin={{ vertical: 'top', horizontal: 'left' }} open={Boolean(anchorElNav)} onClose={handleCloseNavMenu} sx={{ display: { xs: 'block', md: 'none' }}}>
+              <Link to="features" spy={true} smooth={true} duration={500}><MenuItem className="headerMenuItem" component="a" href="" onClick={handleCloseNavMenu}>Features</MenuItem></Link>
+              <Link to="about" spy={true} smooth={true} duration={500}><MenuItem className="headerMenuItem" component="a" href="" onClick={handleCloseNavMenu}>About</MenuItem></Link>
+              <Link to="services" spy={true} smooth={true} duration={500}><MenuItem className="headerMenuItem" component="a" href="" onClick={handleCloseNavMenu}>Services</MenuItem></Link>
+              <Link to="team" spy={true} smooth={true} duration={500}><MenuItem className="headerMenuItem" component="a" href="" onClick={handleCloseNavMenu}>Gallery</MenuItem></Link>
+              <Link to="contact" spy={true} smooth={true} duration={500}><MenuItem className="headerMenuItem" component="a" href="" onClick={handleCloseNavMenu}>Contact</MenuItem></Link>
+              </Menu>
+            </Box>
+            <Typography variant="h5" noWrap sx={{ display: { xs: 'flex', md: 'none' }, opacity: '1', fontSize: '20px', fontFamily: 'monospace', fontWeight: 700, letterSpacing: '.3rem', float: 'left' }}>
+              {"<Code/>Axi"}
+            </Typography>
+            <Box sx={{ display: { xs: 'flex', md: 'none' }, marginLeft: 'auto' }}>
+              <IconButton size="large" aria-controls="menu-appbar" aria-haspopup="true" onClick={handleOpenNavMenu} color="inherit">
+                <MenuIcon sx={{width: '30px', height: '30px'}} />
+              </IconButton>
+            </Box>
+            {/* Mobil Header Finished */}
+
+            {/* PC Header Started */}
+            <Typography variant="h6" noWrap component="a" sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, fontSize: '20px', fontFamily: 'monospace', fontWeight: 700, letterSpacing: '.3rem', color: 'inherit', textTransform: 'uppercase'}}>
+            {"<Code/>Axi Software"}
+            </Typography>
+            <Box sx={{ flexGrow: 2, display: { xs: 'none', md: 'flex' }, justifyContent: 'end', fontFamily: 'Poppins' }}>
+              <Link to="features" offset={-130} spy={true} smooth={true} duration={500}><Button className="headerButton">Features</Button></Link>
+              <Link to="about" offset={-130} spy={true} smooth={true} duration={500}><Button className="headerButton">About</Button></Link>
+              <Link to="services" spy={true} smooth={true} duration={500}><Button className="headerButton">Services</Button></Link>
+              <Link to="team" spy={true} smooth={true} duration={500}><Button className="headerButton">Team</Button></Link>
+              <Link to="contact" offset={-130} spy={true} smooth={true} duration={500}><Button className="headerButton">Contact</Button></Link>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </center>
   );
-};
+}
+export default Navigation;

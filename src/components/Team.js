@@ -1,33 +1,44 @@
+import { Container, Grid, Typography } from "@mui/material";
 import React from "react";
 
 export const Team = (props) => {
   return (
-    <div id="team" className="text-center">
-      <div className="container">
-        <div className="col-md-8 col-md-offset-2 section-title">
-          <h2>Meet the Team</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
-          </p>
-        </div>
-        <div id="row">
-          {props.data
-            ? props.data.map((d, i) => (
-                <div key={`${d.name}-${i}`} className="col-md-3 col-sm-6 team">
-                  <div className="thumbnail">
-                    {" "}
-                    <img src={d.img} alt="..." className="team-img" />
-                    <div className="caption">
-                      <h4>{d.name}</h4>
-                      <p>{d.job}</p>
+    <>
+      <Container id='team' maxWidth="lg" className="teamContainer">
+        <Grid container spacing={3} direction="row" justifyContent="center" alignItems="center">
+          <Grid item xs={12}>
+            <Typography className="teamTitle">
+              TEAM
+              <hr />
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography className="teamText1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
+              dapibus leonec.
+            </Typography>
+          </Grid>
+          <Grid item container direction="row">
+            {props.data
+              ? props.data.map((d, i) => (
+                <Grid item xs={12} sm={6} md={3}>
+                  <center>
+                    <div key={`${d.name}-${i}`}>
+                      <img src={d.img} alt="..." />
                     </div>
-                  </div>
-                </div>
+                    <Typography className="teamImgText1">
+                      {d.name}
+                    </Typography>
+                    <Typography className="teamImgText2">
+                      {d.job}
+                    </Typography>
+                  </center>
+                </Grid>
               ))
-            : "loading"}
-        </div>
-      </div>
-    </div>
+              : "loading"}
+          </Grid>
+        </Grid>
+      </Container>
+    </>
   );
 };
