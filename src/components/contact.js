@@ -48,8 +48,8 @@ export const Contact = (props) => {
                     <Divider className="contactDivider" />
                   </Typography>
                   <Typography className="contactText1">
-                    Please fill out the form below to send us an email and we will
-                    get back to you as soon as possible.
+                    Bize E-posta göndermek için lütfen aşağıdaki formu doldurun.
+                    Size en kısa sürede geri dönüş yapacağız.
                   </Typography>
                 </Grid>
                 <form onSubmit={handleSubmit}>
@@ -60,7 +60,7 @@ export const Contact = (props) => {
                         id="name"
                         name="name"
                         className="contactInput"
-                        placeholder="Name"
+                        placeholder="Ad-Soyad"
                         required
                         onChange={handleChange}
                       />
@@ -71,7 +71,7 @@ export const Contact = (props) => {
                         id="phone"
                         name="phone"
                         className="contactInput"
-                        placeholder="Phone Number"
+                        placeholder="Telefon Numarası"
                         required
                         onChange={handleChange}
                       />
@@ -82,14 +82,14 @@ export const Contact = (props) => {
                         id="message"
                         className="contactInput"
                         rows="4"
-                        placeholder="Message"
+                        placeholder="Mesajınız"
                         required
                         onChange={handleChange}
                       ></textarea>
                     </Grid>
                     <Grid item xs={12}>
                       <Button type="submit" className="contactButton">
-                        Send Message
+                        Mesaj Gönder
                       </Button>
                     </Grid>
                   </Grid>
@@ -98,20 +98,31 @@ export const Contact = (props) => {
               <Grid item xs container direction="column">
                 <Grid item xs>
                   <Typography className="contactInfo">
-                    Contact info
+                    İletişim Bilgileri
+                    <center>
+                      <Divider className="contactDivider" />
+                    </center>
                   </Typography>
-                  <Typography className="contactInfoTitle">
-                    <Phone /> Phone
-                  </Typography>
-                  <Typography className="contactInfoText">
-                    +90 535 517 42 91
-                  </Typography>
-                  <Typography className="contactInfoTitle">
-                    <Email /> Email
-                  </Typography>
-                  <Typography className="contactInfoText">
-                    info@codeaxi.com
-                  </Typography>
+                  <center>
+                    <Grid container xs direction="column" justifyContent="center" alignItems="center" >
+                      <Grid item xs>
+                        <Typography>
+                          <Phone size="small" className="contactIcon" />
+                        </Typography>
+                        <Typography sx={{ marginBottom: '20px' }}>
+                          <a className="contactPhoneNumber" href={`tel:${+905348994291}`}>+90 (534) 899 42 91</a>
+                        </Typography>
+                      </Grid>
+                      <Grid item xs>
+                        <Typography>
+                          <Email size="small" className="contactIcon" />
+                        </Typography>
+                        <Typography>
+                          info@codeaxi.com
+                        </Typography>
+                      </Grid>
+                    </Grid>
+                  </center>
                 </Grid>
               </Grid>
             </Grid>

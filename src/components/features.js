@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Grid, Typography } from "@mui/material";
-import { MessagesSquare } from 'lucide-react';
+import { Blocks, FileCode, MonitorSmartphone, Smartphone } from 'lucide-react';
 
 export const Features = () => {
   return (
@@ -10,53 +10,53 @@ export const Features = () => {
           <Grid container spacing={8} direction="column" justifyContent="center" alignItems="center">
             <Grid item xs={12}>
               <Typography className="featuresTitle">
-                Features
+                Hizmetlerimiz
                 <hr />
               </Typography>
             </Grid>
             <Grid item container xs={12} textAlign="center" spacing={2} direction="row" justifyContent="center" alignItems="center">
               <Grid item xs={6} md={3}>
                 <Typography>
-                  <MessagesSquare className="featuresIcon" />
+                  <MonitorSmartphone className="featuresIcon" />
                 </Typography>
                 <Typography className="featuresText1">
-                  Lorem ipsum
+                  Özel Yazılım Geliştirme
                 </Typography>
                 <Typography className="featuresText2">
-                  Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.
+                  Web uygulamaları, mobil uygulamalar, masaüstü uygulamalar ve diğer özel yazılımların tasarımı ve geliştirilmesi.
                 </Typography>
               </Grid>
               <Grid item xs={6} md={3}>
                 <Typography>
-                  <MessagesSquare className="featuresIcon" />
+                  <Smartphone className="featuresIcon" />
                 </Typography>
                 <Typography className="featuresText1">
-                  Lorem ipsum
+                  Mobil Uygulama Geliştirme
                 </Typography>
                 <Typography className="featuresText2">
-                  Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.
+                  İOS ve Android için mobil uygulama geliştirme. Hem kullanıcı arayüzü hem de kullanıcı deneyimi tasarımı.
                 </Typography>
               </Grid>
               <Grid item xs={6} md={3}>
                 <Typography>
-                  <MessagesSquare className="featuresIcon" />
+                  <Blocks className="featuresIcon" />
                 </Typography>
                 <Typography className="featuresText1">
-                  Lorem ipsum
+                  Yazılım Entegrasyonları
                 </Typography>
                 <Typography className="featuresText2">
-                  Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.
+                  Farklı yazılımlar arasında entegrasyon sağlama. Varolan sistemlerle uyumlu çalışan özel çözümler geliştirme.
                 </Typography>
               </Grid>
               <Grid item xs={6} md={3}>
                 <Typography>
-                  <MessagesSquare className="featuresIcon" />
+                  <FileCode className="featuresIcon" />
                 </Typography>
                 <Typography className="featuresText1">
-                  Lorem ipsum
+                  Yazılım Bakım ve Destek
                 </Typography>
                 <Typography className="featuresText2">
-                  Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.
+                  Varolan yazılım sistemlerinin bakımını yapma. Müşteri desteği, güncellemeler ve hata düzeltmeleri sağlama.
                 </Typography>
               </Grid>
             </Grid>

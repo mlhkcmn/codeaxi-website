@@ -15,18 +15,29 @@ export const About = (props) => {
                     <hr />
                   </Typography>
                   <Typography className="aboutText1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Firmamız, teknolojik çözümlerle iş dünyasını dönüştürme vizyonuyla kurulmuş bir yazılım şirketidir.
+                    Codeaxi Software, 2021 yılında kurulmuş olup, müşterilerimize özel ve yenilikçi yazılım çözümleri sunma amacını taşımaktadır.
                   </Typography>
                   <Typography className="aboutTitle2">
-                    Neden bizi seçmelisiniz?
+                    Misyonumuz
+                  </Typography>
+                  <Typography className="aboutText1">
+                    Müşterilerimizin ihtiyaçlarına odaklanarak, kaliteli ve ölçeklenebilir yazılım çözümleri geliştirmek; 
+                    iş süreçlerinin optimize etmek ve rekabet avantajı sağlamak. 
+                  </Typography>
+                  <Typography className="aboutTitle2">
+                    Vizyonumuz
+                  </Typography>
+                  <Typography className="aboutText1">
+                    Teknolojiyi kullanarak, müşterilerimizin geleceğe güvenle bakmalarını sağlamak;
+                    inovasyon ve mükemmeliyeti birleştirerek sektörde öncü bir konuma gelmek.
                   </Typography>
                 </Grid>
               </Grid>
             </Grid>
             <Grid item xs={12} md={6}>
+              <br />
+              <br />
               <center>
                 <img src="/img/about.jpg" className="imageResponsive" alt="" />
               </center>

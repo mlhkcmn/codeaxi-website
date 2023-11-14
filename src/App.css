@@ -15,6 +15,10 @@ hr {
   background: linear-gradient(to right, #a749dd 0%, #274bc6 100%) !important;
 }
 
+.navbarTitle {
+  font-family: 'Neuropol X Free', sans-serif !important;
+}
+
 .header {
   border-radius: 60px !important;
   width: 97% !important;
@@ -32,9 +36,11 @@ hr {
 }
 
 .headerButton {
+  font-family: 'PCap Terminal' !important;
   font-size: 14px !important;
   margin: 0.5 !important;
   color: white !important;
+  font-style: italic !important;
 }
 
 .herosliderContainer {
@@ -52,25 +58,25 @@ hr {
 }
 
 .herosliderText1 {
-  font-family: "Raleway", sans-serif !important;
+  font-family: 'Neuropol X Free', sans-serif !important;
   color: #fff !important;
   font-weight: 700 !important;
-  text-transform: uppercase !important;
   margin-bottom: 10px !important;
 }
 
 .herosliderText2 {
   color: #fff !important;
-  font-size: 22px !important;
   font-weight: 300 !important;
   line-height: 30px !important;
   margin-bottom: 60px !important;
+  font-family: 'Neuropol X Free', sans-serif !important;
 }
 
 .herosliderButton {
+  font-family: 'Neuropol X Free', sans-serif !important;
+  font-style: italic !important;
   background-color: #007bff !important;
   color: white !important;
-  font-size: 18px !important;
   width: 250px !important;
   font-weight: 400 !important;
   border-radius: 20px !important;
@@ -136,7 +142,7 @@ hr {
   font-size: 15px !important;
   font-weight: 400 !important;
   line-height: 24px !important;
-  margin: 30px 0 !important;
+  margin: 20px 0 !important;
 }
 
 .aboutTitle2 {
@@ -145,7 +151,6 @@ hr {
   font-weight: 600 !important;
   color: #333 !important;
   font-family: "Raleway", sans-serif !important;
-  margin: 0 0 20px !important
 }
 
 .imageResponsive {
@@ -188,6 +193,47 @@ hr {
 }
 
 .servicesText2 {
+  color: #fff !important;
+  margin: 0 0 10px !important;
+  font-size: 15px !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.whyContainer {
+  padding: 100px 0 !important;
+  background-image: linear-gradient(to bottom, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+  color: #fff !important;
+}
+
+.whyTitle {
+  font-size: 36px !important;
+  font-family: "Raleway", sans-serif !important;
+  text-transform: uppercase !important;
+  font-weight: 800 !important;
+  text-align: center !important;
+}
+
+.whyIcon {
+  font-size: 48px !important;
+  margin-bottom: 20px !important;
+  transition: all 0.5s !important;
+  color: #fff !important;
+  width: 120px !important;
+  padding: 35px 0 !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  background-image: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%) !important;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05) !important;
+}
+
+.whyText1 {
+  font-weight: 700 !important;
+  padding: 5px 0 !important;
+  font-size: 18px !important;
+  font-family: "Raleway", sans-serif !important;
+}
+
+.whyText2 {
   color: #fff !important;
   margin: 0 0 10px !important;
   font-size: 15px !important;
@@ -289,12 +335,12 @@ hr {
 }
 
 .contactInfo {
-  color: #fff !important;
-  font-size: 20px !important;
-  margin-top: 80px !important;
-  margin-bottom: 25px !important;
-  padding-bottom: 20px !important;
+  font-size: 30px !important;
   font-family: "Raleway", sans-serif !important;
+  text-transform: uppercase !important;
+  font-weight: 800 !important;
+  margin: 30px 0 !important;
+  text-align: center !important;
 }
 
 .contactInfoTitle {
@@ -308,6 +354,23 @@ hr {
   font-family: "Open Sans", sans-serif !important;
   margin-top: 10px !important;
   font-weight: 200 !important;
+}
+
+.contactIcon {
+  margin-bottom: 20px !important;
+  transition: all 0.5s !important;
+  color: #fff !important;
+  width: 70px !important;
+  padding: 20px 0 !important;
+  height: 30px !important;
+  border-radius: 20% !important;
+  background-image: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%) !important;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05) !important;
+}
+
+.contactPhoneNumber {
+  text-decoration: none !important;
+  color: white !important;
 }
 
 .icon {
