@@ -17,6 +17,8 @@ hr {
 
 .navbarTitle {
   font-family: 'Neuropol X Free', sans-serif !important;
+  text-decoration: none !important;
+  color: white !important;
 }
 
 .header {
@@ -36,11 +38,9 @@ hr {
 }
 
 .headerButton {
-  font-family: 'PCap Terminal' !important;
   font-size: 14px !important;
   margin: 0.5 !important;
   color: white !important;
-  font-style: italic !important;
 }
 
 .herosliderContainer {
@@ -73,7 +73,7 @@ hr {
 }
 
 .herosliderButton {
-  font-family: 'Neuropol X Free', sans-serif !important;
+  font-family: 'Open Sans', sans-serif !important;
   font-style: italic !important;
   background-color: #007bff !important;
   color: white !important;

@@ -25,11 +25,11 @@ function Navigation() {
               <Menu id="menu-appbar" anchorEl={anchorElNav} anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} keepMounted transformOrigin={{ vertical: 'top', horizontal: 'left' }} open={Boolean(anchorElNav)} onClose={handleCloseNavMenu} sx={{ display: { xs: 'block', md: 'none' }}}>
               <Link to="features" spy={true} smooth={true} duration={500}><MenuItem className="headerMenuItem" component="a" href="" onClick={handleCloseNavMenu}>Hizmetler</MenuItem></Link>
               <Link to="about" spy={true} smooth={true} duration={500}><MenuItem className="headerMenuItem" component="a" href="" onClick={handleCloseNavMenu}>Hakkımızda</MenuItem></Link>
-              <Link to="why" spy={true} smooth={true} duration={500}><MenuItem className="headerMenuItem" component="a" href="" onClick={handleCloseNavMenu}>Why</MenuItem></Link>
+              <Link to="why" spy={true} smooth={true} duration={500}><MenuItem className="headerMenuItem" component="a" href="" onClick={handleCloseNavMenu}>Deneyim</MenuItem></Link>
               <Link to="contact" spy={true} smooth={true} duration={500}><MenuItem className="headerMenuItem" component="a" href="" onClick={handleCloseNavMenu}>İletişim</MenuItem></Link>
               </Menu>
             </Box>
-            <Typography variant="h5" className="navbarTitle" noWrap sx={{ display: { xs: 'flex', md: 'none' }, opacity: '1', fontSize: '20px', fontFamily: 'monospace', fontWeight: 700, letterSpacing: '.3rem', float: 'left' }}>
+            <Typography component="a" href="/" variant="h5" className="navbarTitle" noWrap sx={{ display: { xs: 'flex', md: 'none' }, opacity: '1', fontSize: '20px', fontFamily: 'monospace', fontWeight: 700, letterSpacing: '.3rem', float: 'left' }}>
               {"<code/>axi"}
             </Typography>
             <Box sx={{ display: { xs: 'flex', md: 'none' }, marginLeft: 'auto' }}>
@@ -40,13 +40,13 @@ function Navigation() {
             {/* Mobil Header Finished */}
 
             {/* PC Header Started */}
-            <Typography variant="h6" className="navbarTitle" noWrap component="a" sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, fontSize: '20px', fontFamily: 'monospace', fontWeight: 700, letterSpacing: '.3rem', color: 'inherit'}}>
-            {"<code/>axi"}
+            <Typography href="/" variant="h6" className="navbarTitle" noWrap component="a" sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, fontSize: '20px', fontFamily: 'monospace', fontWeight: 700, letterSpacing: '.3rem', color: 'inherit'}}>
+             {"<code/>axi"}
             </Typography>
             <Box sx={{ flexGrow: 2, display: { xs: 'none', md: 'flex' }, justifyContent: 'end', fontFamily: 'Poppins' }}>
               <Link to="features" offset={-80} spy={true} smooth={true} duration={500}><Button className="headerButton">Hizmetler</Button></Link>
               <Link to="about" offset={-70} spy={true} smooth={true} duration={500}><Button className="headerButton">Hakkımızda</Button></Link>
-              <Link to="why" spy={true} smooth={true} duration={500}><Button className="headerButton">Why</Button></Link>
+              <Link to="why" spy={true} smooth={true} duration={500}><Button className="headerButton">Deneyim</Button></Link>
               <Link to="contact" offset={-130} spy={true} smooth={true} duration={500}><Button className="headerButton">İletişim</Button></Link>
             </Box>
           </Toolbar>
