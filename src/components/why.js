@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Grid, Typography } from "@mui/material";
-import { MessagesSquare } from 'lucide-react';
+import { Brain, Briefcase, Cpu, Shield, LineChart, Timer } from 'lucide-react';
+
 
 export const Why = (props) => {
   return (
@@ -17,7 +18,7 @@ export const Why = (props) => {
             <Grid item container xs={12} textAlign="center" spacing={5} direction="row" justifyContent="center" alignItems="center">
               <Grid item xs={6} md={4}>
                 <Typography>
-                  <MessagesSquare className="whyIcon" />
+                  <Brain className="whyIcon" />
                 </Typography>
                 <Typography className="whyText1">
                   Uzmanlık ve Deneyim
@@ -29,7 +30,7 @@ export const Why = (props) => {
               </Grid>
               <Grid item xs={6} md={4}>
                 <Typography>
-                  <MessagesSquare className="whyIcon" />
+                  <Briefcase className="whyIcon" />
                 </Typography>
                 <Typography className="whyText1">
                   Müşteri Odaklı Yaklaşım
@@ -41,7 +42,7 @@ export const Why = (props) => {
               </Grid>
               <Grid item xs={6} md={4}>
                 <Typography>
-                  <MessagesSquare className="whyIcon" />
+                  <Cpu className="whyIcon" />
                 </Typography>
                 <Typography className="whyText1">
                   Teknolojik İnovasyon
@@ -53,19 +54,19 @@ export const Why = (props) => {
               </Grid>
               <Grid item xs={6} md={4}>
                 <Typography>
-                  <MessagesSquare className="whyIcon" />
+                  <Shield className="whyIcon" />
                 </Typography>
                 <Typography className="whyText1">
                   Güvenlik ve Veri Gizliliği
                 </Typography>
                 <Typography className="whyText2">
-                  Güvenlik konusuna özel bir önem veriyor müşteri verilerini en üst düzeyde koruma taahhüdümüzü sürdürüyoruz. 
+                  Güvenlik konusuna özel bir önem veriyor müşteri verilerini en üst düzeyde koruma taahhüdümüzü sürdürüyoruz.
                   Güvenlik standartlarına uygun çözümlerimizle, müşteri bilgilerini güvende tutuyoruz.
                 </Typography>
               </Grid>
               <Grid item xs={6} md={4}>
                 <Typography>
-                  <MessagesSquare className="whyIcon" />
+                  <LineChart className="whyIcon" />
                 </Typography>
                 <Typography className="whyText1">
                   Esnek ve Ölçeklenebilir Çözümler
@@ -77,7 +78,7 @@ export const Why = (props) => {
               </Grid>
               <Grid item xs={6} md={4}>
                 <Typography>
-                  <MessagesSquare className="whyIcon" />
+                  <Timer className="whyIcon" />
                 </Typography>
                 <Typography className="whyText1">
                   Proje Yönetimi ve Zamanında Teslimat

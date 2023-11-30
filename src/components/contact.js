@@ -27,6 +27,7 @@ export const Contact = (props) => {
         (result) => {
           console.log(result.text);
           clearState();
+          window.location.reload();
 
         },
         (error) => {
@@ -74,6 +75,7 @@ export const Contact = (props) => {
                         placeholder="Telefon Numarası"
                         required
                         onChange={handleChange}
+                        maxLength="11"
                       />
                     </Grid>
                     <Grid item xs={12} md={10}>
@@ -110,7 +112,7 @@ export const Contact = (props) => {
                           <Phone size="small" className="contactIcon" />
                         </Typography>
                         <Typography sx={{ marginBottom: '20px' }}>
-                          <a className="contactPhoneNumber" href={`tel:${+905348994291}`}>+90 (534) 899 42 91</a>
+                          <a className="contactPhoneNumber" href={`tel:${'+90 {534} 899 42 91'}`}>+90 (534) 899 42 91</a>
                         </Typography>
                       </Grid>
                       <Grid item xs>
